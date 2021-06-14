@@ -51,3 +51,5 @@ RUN cp /tmp/server-functions.sh ~/.bashrc.d/server-functions \
 # Customs cli's and user scripts for /usr/local/bin
 COPY --chown=gitpod:gitpod .gp/bash/bin/hot-reload.sh /usr/local/bin
 RUN sudo mv /usr/local/bin/hot-reload.sh /usr/local/bin/hot-reload
+
+RUN sudo apt-get update  && sudo apt-get install -y   redis-server  && sudo rm -rf /var/lib/apt/lists/*

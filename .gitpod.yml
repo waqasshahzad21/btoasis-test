@@ -26,6 +26,7 @@ tasks:
       bash .gp/bash/init-optional-scaffolding.sh
       bash .gp/bash/init-project.sh
       bash .gp/bash/init-complete.sh
+      composer install && php artisan migrate && php artisan db:seed
     name: Main Terminal
   - openMode: split-right
     command: |
