@@ -1,0 +1,14 @@
+image:
+  file: .gitpod.Dockerfile
+ports:
+- port: 8000
+  onOpen: open-preview
+tasks:
+- init: >
+    composer install && php artisan key:generate && php artisan migrate && php artisan db:seed
+  command: >
+    php artisan server:run 0.0.0.0:8000
+vscode:
+  extensions:
+    - tomi.xajssnippets@1.2.0:3e656a553f002ae4b47cd7a220b79db9
+    - influrium.haxe-jsx@0.0.5:5158a06a686ae366999a1ebe21a95979
